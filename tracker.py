@@ -52,6 +52,7 @@ def record_flags(log, flags, stake=20.0, now=None):
             "entry_no_c": f["no_ask"], "model_no": f["model_no"], "mkt_no": f["mkt_no"],
             "edge_x": f["edge_x"], "stake": stake, "contracts": contracts,
             "entry_fee": kalshi_fee(contracts, price),
+            "banked_at_entry": f.get("banked"), "games_played_at_entry": f.get("games_played"),
             "entry_time": now, "status": "open", "result": None, "pnl": None,
         }
         added += 1

@@ -190,7 +190,8 @@ def analyze(stages, ladders, banked, playing=None):
                 picks.append({"ticker": ln["ticker"], "team": team, "line": ln["threshold"],
                               "no_ask": ask, "model_no": r["model_no_%"], "mkt_no": r["price_%"],
                               "edge_x": round(r["model_no_%"] / max(r["price_%"], 0.1), 2),
-                              "cost": round(c * ask / 100, 2)})
+                              "cost": round(c * ask / 100, 2),
+                              "banked": bk, "games_played": gp})
     picks.sort(key=lambda p: p["edge_x"], reverse=True)
     diag.sort()
     return picks, diag
