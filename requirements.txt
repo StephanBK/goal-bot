@@ -1,0 +1,2 @@
+# No third-party packages — the bot uses only the Python standard library.
+# This file exists so Railway/Nixpacks detects a Python project.
